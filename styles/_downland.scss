@@ -1,0 +1,17 @@
+.downland {
+  &__img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: auto;
+  }
+}

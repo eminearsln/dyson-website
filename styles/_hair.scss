@@ -1,0 +1,40 @@
+.hair {
+  &__continer {
+    align-items: center;
+    justify-content: center;
+  }
+  &__boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__box {
+    margin: 20px;
+    // border: 1px solid red;
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    width: 250px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+  }
+  &__desc {
+    padding-top: 30px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .hair {
+    &__boxes {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.vacuum {
+  text-align: center;
+  padding: 10px 50px;
+  &-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 70px;
+    cursor: pointer;
+    div {
+      display: flex;
+      gap: 40px;
+    }
+    img {
+      width: 200px;
+      &:hover {
+        transition: all 0.4;
+        width: 300px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .vacuum {
+    &-card {
+      div {
+        flex-direction: column;
+      }
+    }
+  }
+}

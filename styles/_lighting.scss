@@ -1,0 +1,22 @@
+.lighting {
+  &__container {
+    row-gap: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__data {
+    display: flex;
+    text-align: center;
+  }
+  &__desc {
+    text-align: center;
+    margin-bottom: 40px;
+    f &__img {
+      width: 280px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
