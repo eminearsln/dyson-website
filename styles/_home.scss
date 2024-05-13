@@ -42,8 +42,8 @@ input {
   }
   &__tooltip {
     position: absolute;
-    top: 130px;
-    right: 80px;
+    top: 120px;
+    left: 300px;
     &-img {
       width: 70px;
     }
@@ -55,7 +55,7 @@ input {
       border-radius: 64px;
       font-size: var(--small-font-size);
       position: absolute;
-      transform: translate(60px, -40px);
+      transform: translate(-10px, -10px);
       white-space: nowrap;
     }
   }

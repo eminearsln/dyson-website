@@ -3,38 +3,63 @@
   overflow: hidden;
   display: grid;
   margin-left: 40px;
+
   &__container {
+    // position: relative;
+    // transform: translate(150px, -40px);
     row-gap: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // align-items: flex-start; /* footer__group ve footer__links aynı hizaya gelmesi için */
+    flex-wrap: wrap; /* Eğer içerikler yeterince geniş değilse, alt satıra geçmelerini sağlar */
   }
+
   &__logo {
+    width: 50%;
+    justify-content: center;
+    display: flex;
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
     color: var(--fist-color);
   }
+
   &__data {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 450px;
+    width: 85%;
+    justify-content: center;
+    position: relative;
+    // transform: translate(70px, -40px);
+    padding: 25px;
+    display: flex;
+    // text-align: start;
+    gap: 20px; /* İçerikler arasındaki boşluk */
   }
+
   &__title {
     font-size: var(--h3-font-size);
     font-weight: var(--font-semi-bold);
     margin-bottom: 20px;
   }
+
   &__links {
-    display: grid;
-    row-gap: 12px;
+    display: flex; /* Değişiklik burada */
+    flex-direction: column; /* footer__links içindeki içeriğin dikey hizalanması */
+    gap: 12px; /* İçerikler arasındaki boşluk */
   }
+
   &__link {
     color: var(--text-color);
     transition: all 0.3s ease;
+
     &:hover {
       color: var(--white-color);
     }
   }
 
   &__group {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* footer__group içindeki içerikler arasındaki boşluk */
     input {
       border: none;
       outline: none;
@@ -43,6 +68,7 @@
       width: 180px;
       border-radius: 64px;
       background-color: var(--container-color);
+      color: white;
     }
     button {
       cursor: pointer;
@@ -50,21 +76,38 @@
       outline: none;
     }
   }
+  &__form {
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__social {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
   &__social-links {
+    width: 100%;
+    justify-content: center;
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
+
     a {
       color: var(--white-color);
       font-size: var(--h2-font-size);
       transition: all 0.4s ease;
+
       &:hover {
-        color: var(--text-color);
+        color: var(--first-color);
       }
     }
   }
+
   span {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }

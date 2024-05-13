@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  background-color: hsla(0, 0%, 1%, 0.7);
   .nav {
     height: var(--header-height);
     display: flex;
@@ -49,14 +50,14 @@
     color: var(--white-color);
     font-size: 22px;
     font-weight: var(--font-medium);
-    a:hover {
+    &:hover {
       color: var(--first-color);
     }
   }
-  .nav__search-icon {
+  &-icon {
     margin-left: 3px;
   }
-  .basket {
+  &-basket {
     margin-left: 30px;
     height: var(--header-height);
   }
@@ -70,62 +71,53 @@
 .nav__toggle {
   position: absolute;
   top: 16px;
-  left: 24px;
+  right: 24px;
 }
 .show-menu {
   top: 0;
 }
 
+/* Küçük ekranlar için */
 @media screen and (max-width: 1150px) {
-  .nav__toggle,
-  .nav__search,
-  .nav__close {
-    display: block;
-  }
-  .nav__logo {
-    display: none;
-  }
-  .nav__menu ul {
+  .nav__menu {
     position: fixed;
     top: -100%;
     left: 0;
     background-color: hsla(23, 12%, 4%, 0.2);
     width: 100%;
     padding: 88px 72px;
-    backdrop-filter: blur(32px);
+
     transition: top 0.4s;
-    --webkit-backdrop-filter: blur(32px);
   }
 
-  .nav__search {
-    position: absolute;
-    width: 55%;
-    right: 0;
+  .nav__toggle {
+    position: fixed;
+    top: 16px;
+    right: 24px;
+  }
+  .nav__list {
+    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    input {
-      width: 100%;
-      background: none;
-    }
-
-    .nav__search-icon {
-      margin-left: 3px;
+    flex-direction: column;
+    row-gap: 40px;
+    .nav__link {
+      color: var(--white-color);
+      font-weight: var(--font-medium);
+      transition: color 0.4s;
+      &:hover {
+        color: var(--first-color);
+      }
     }
   }
-
   .nav__close {
     position: absolute;
     top: 16px;
     right: 24px;
-    display: none;
-    font-size: 24px;
-    color: var(--white-color);
-    cursor: pointer;
   }
 
-  .show-menu .nav__close {
-    display: block;
+  .show-menu {
+    top: 0;
+    backdrop-filter: blur(32px);
+    --webkit-backdrop-filter: blur(32px);
   }
 }

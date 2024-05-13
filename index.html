@@ -32,12 +32,16 @@
           </ul>
           <div class="nav__search">
             <div class="nav__inp">
-              <input type="text" placeholder="Search " />
+              <input
+                type="text"
+                placeholder="Search..."
+                style="background: transparent"
+              />
             </div>
             <div class="nav__search-icon">
               <a href=""><i class="bi bi-search"></i></a>
             </div>
-            <div class="basket"></div>
+            <div class="nav__search-basket"></div>
             <a href=""><i class="bi bi-basket3"></i></a>
           </div>
           <div class="nav__close" id="nav-close">
@@ -98,15 +102,17 @@
           <div class="lighting__data">
             <h2 class="section__title">Discover Dyson lighting</h2>
             <p class="lighting__desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              dignissimos odit magni esse reiciendis saepe dolores reprehenderit
-              optio amet voluptates.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reprehenderit accusamus quaerat expedita explicabo, facere ad,
+              iste odio commodi optio dolor libero quis tempore consequuntur,
+              quia nulla hic et numquam mollitia.
             </p>
 
             <a href="#" class="button"
               >Learn More<i class="bi bi-arrow-right-circle-fill"></i
             ></a>
-
+          </div>
+          <div class="lighting__image">
             <img src="/ımg/aydınlatma.png" alt="" class="lighting__img" />
           </div>
         </div>
@@ -194,7 +200,7 @@
         </div>
       </section>
       <!--air purifier-->
-      <section class="air section" id="air">
+      <section class="air" id="air">
         <h2 class="section__title">Explore Dyson air purifiers</h2>
         <div class="air__container">
           <div class="air__content">
@@ -205,7 +211,7 @@
                 alt=""
                 class="air__tooltip-img"
               />
-              <span class="air__tooltip-text">Hepa13 İnsulation</span>
+              <span class="air__tooltip-text text1">Hepa13 İnsulation</span>
             </div>
             <div class="air__tooltip air__tooltip-2">
               <img
@@ -213,7 +219,9 @@
                 alt=""
                 class="air__tooltip-img"
               />
-              <span class="air__tooltip-text">Easy Filter Maintenance</span>
+              <span class="air__tooltip-text text2"
+                >Easy Filter Maintenance</span
+              >
             </div>
             <div class="air__tooltip air__tooltip-3">
               <img
@@ -221,7 +229,7 @@
                 alt=""
                 class="air__tooltip-img"
               />
-              <span class="air__tooltip-text">360° Oscillation</span>
+              <span class="air__tooltip-text text3">360° Oscillation</span>
             </div>
             <div class="air__desc">
               <h2 class="">Dyson Purifier Humidify+Cool Formaldehyde™ PH04</h2>
@@ -247,11 +255,11 @@
       </section>
       <!--footer-->
       <footer class="footer">
-        <div class="footer__container container grid">
-          <div>
+        <div class="footer__container">
+          <div style="height: 35px; width: 80%">
             <a href="#home" class="footer__logo">dyson</a>
           </div>
-          <div class="footer__data grid">
+          <div class="footer__data">
             <div>
               <h3 class="footer__title">Products</h3>
               <ul class="footer_links">
@@ -290,12 +298,12 @@
               </ul>
             </div>
             <div class="footer__group">
-              <form class="footer__form">
+              <div class="footer__form">
                 <input type="text" placeholder="email" />
                 <button class="footer__button button">
                   Submit <i class="bi bi-send-fill"> </i>
                 </button>
-              </form>
+              </div>
             </div>
           </div>
           <div class="footer__social">

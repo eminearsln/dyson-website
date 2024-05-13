@@ -1,22 +1,29 @@
 // show menu
 const navMenu = document.getElementById("nav-menu");
-const navToggle = document.getElementById("nav-toggle");
+const navToggle = document.querySelector(".nav__toggle");
 const navClose = document.getElementById("nav-close");
 const navLink = document.querySelectorAll(".nav__link");
+
 if (navToggle) {
   navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
+    navMenu.classList.toggle("show-menu");
+    navToggle.style.display = "none";
+    navClose.style.display = "block";
   });
 }
+
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
+    navToggle.style.display = "block";
+    navClose.style.display = "none";
   });
 }
 
 const linkAction = () => {
   navMenu.classList.remove("show-menu");
 };
+
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 // blur header
@@ -27,12 +34,3 @@ const blurHeader = () => {
     : header.classList.remove("blur-header");
 };
 window.addEventListener("scroll", blurHeader);
-
-// scroolup
-const scrollUp = () => {
-  const scrollUp = document.getElementById("scroll-up");
-  this.scrollY >= 350
-    ? scrollUp.classList.add("show-scroll")
-    : scrollUp.classList.remove("show-scroll");
-};
-window.addEventListener("scroll", scrollUp);
